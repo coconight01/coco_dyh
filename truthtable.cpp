@@ -8,7 +8,7 @@ using namespace std;
 int tp,lft[10010],bef[10010]; 
 void init(){
 	printf("以下是逻辑运算符号的形式与具体意义\n"); 
-	printf("^:异或\n~:否定\n&:与\n|:或\n->:蕴涵\n<->:双蕴涵\n");
+	printf("~:否定\n&:与\n|:或\n->:蕴涵\n<->:双蕴涵\n");
 	printf("请输入命题公式，仅支持大写字母、逻辑运算符和小括号的输入\n"); 
 	printf("输入中请不要带有空格或空括号！\n"); 
 }
