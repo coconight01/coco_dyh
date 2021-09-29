@@ -109,6 +109,17 @@ int main(){
 	scanf("%s",a+1);len=strlen(a+1);
 	a[0]='(';a[len+1]=')';len++;
 	pre();p0_1[cntz]=-1;
+	{
+		int cnt=0;
+		for(int i=0;i<=len;i++){
+			if(a1[i]==201)cnt++;else if(a1[i]==202)cnt--;
+			else if(a1[i]==203&&(i==len||a1[i+1]>200)) cnt=-10000;
+			else if(a1[i]>203&&(i==len||a1[i+1]>200||a1[i-1]<200))cnt=-10000;
+			else if(i<len&&a1[i]<200&&a1[i+1]<200)cnt=-10000;
+			if(cnt<0){puts("wrong sentence!");return 0;}	
+		}
+		if(cnt>0) {puts("wrong sentence!");return 0;}	
+	}//ask_yes
 	while(1){
 		lens=tp=0;
 		if(!_nxt())return 0;
